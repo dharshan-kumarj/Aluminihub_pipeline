@@ -1,0 +1,27 @@
+2025-04-12 05:24:08,905 - alumni_etl - INFO - Starting ETL process
+2025-04-12 05:24:08,906 - alumni_etl - ERROR - Database connection failed: could not translate host name "dpg-cvso7ma4d50c73e83sf0-a.oregon-postgres.render.com" to address: Temporary failure in name resolution
+
+2025-04-12 05:24:08,906 - alumni_etl - ERROR - Could not connect to database
+2025-04-12 05:24:08,906 - alumni_etl - INFO - ETL process completed: No new registrations found
+2025-04-12 05:25:41,167 - alumni_etl - INFO - Starting ETL process
+2025-04-12 05:25:44,330 - alumni_etl - ERROR - Error fetching data: column a.phone_number does not exist
+LINE 8:             a.phone_number,
+                    ^
+
+2025-04-12 05:25:44,331 - alumni_etl - INFO - ETL process completed: No new registrations found
+2025-04-12 05:26:43,362 - alumni_etl - INFO - Starting ETL process
+2025-04-12 05:26:46,558 - alumni_etl - INFO - Alumni columns: ['alumni_id', 'user_id', 'date_of_birth', 'graduation_year', 'social_media_links', 'availability_for_mentorship', 'created_at', 'updated_at', 'profile_image', 'full_name', 'current_location', 'gender', 'bio', 'contact_number', 'address']
+2025-04-12 05:26:46,558 - alumni_etl - INFO - User columns: ['is_alumni', 'created_at', 'updated_at', 'user_id', 'email', 'username', 'password']
+2025-04-12 05:26:46,967 - alumni_etl - INFO - Fetched 0 alumni registrations from the last 5 hours
+2025-04-12 05:26:46,968 - alumni_etl - INFO - ETL process completed: No new registrations found
+2025-04-12 05:27:15,406 - alumni_etl - INFO - Starting ETL process
+2025-04-12 05:27:18,507 - alumni_etl - INFO - Alumni columns: ['alumni_id', 'user_id', 'date_of_birth', 'graduation_year', 'social_media_links', 'availability_for_mentorship', 'created_at', 'updated_at', 'profile_image', 'full_name', 'current_location', 'gender', 'bio', 'contact_number', 'address']
+2025-04-12 05:27:18,507 - alumni_etl - INFO - User columns: ['is_alumni', 'created_at', 'updated_at', 'user_id', 'email', 'username', 'password']
+2025-04-12 05:27:18,916 - alumni_etl - INFO - Fetched 0 alumni registrations from the last 5 hours
+2025-04-12 05:27:18,917 - alumni_etl - INFO - ETL process completed: No new registrations found
+2025-04-12 05:28:10,086 - alumni_etl - INFO - Starting ETL process
+2025-04-12 05:28:13,191 - alumni_etl - INFO - Alumni columns: ['alumni_id', 'user_id', 'date_of_birth', 'graduation_year', 'social_media_links', 'availability_for_mentorship', 'created_at', 'updated_at', 'profile_image', 'full_name', 'current_location', 'gender', 'bio', 'contact_number', 'address']
+2025-04-12 05:28:13,191 - alumni_etl - INFO - User columns: ['is_alumni', 'created_at', 'updated_at', 'user_id', 'email', 'username', 'password']
+2025-04-12 05:28:13,600 - alumni_etl - INFO - Fetched 4 alumni registrations from the last 10 hours
+2025-04-12 05:28:13,603 - alumni_etl - INFO - Successfully saved 4 registrations to alumni_data/alumni_registrations_20250412_052813.csv
+2025-04-12 05:28:13,604 - alumni_etl - INFO - ETL process completed successfully. Data saved to alumni_data/alumni_registrations_20250412_052813.csv

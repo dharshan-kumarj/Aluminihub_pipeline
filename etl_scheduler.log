@@ -1,0 +1,120 @@
+2025-04-12 02:56:54,522 - etl_scheduler - INFO - Starting ETL scheduler
+2025-04-12 02:56:54,522 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 02:56:54,522 - etl_scheduler - ERROR - Error running ETL script: [Errno 2] No such file or directory: 'python'
+2025-04-12 02:56:54,522 - etl_scheduler - INFO - ETL scheduler is running, press CTRL+C to exit
+2025-04-12 03:00:26,354 - etl_scheduler - INFO - ETL scheduler stopped by user
+2025-04-12 03:00:28,112 - etl_scheduler - INFO - Starting ETL scheduler
+2025-04-12 03:00:28,112 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 03:00:28,122 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 03:00:28,122 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 03:00:28,123 - etl_scheduler - INFO - ETL scheduler is running, press CTRL+C to exit
+2025-04-12 03:05:28,454 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 03:05:28,483 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 03:05:28,483 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 03:10:28,826 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 03:10:28,839 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 03:10:28,839 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 03:15:29,146 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 03:15:29,167 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 03:15:29,168 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 03:20:29,477 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 03:20:29,507 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 03:20:29,508 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 03:25:29,809 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 03:25:29,822 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 03:25:29,822 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 03:30:30,125 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 03:30:30,139 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 03:30:30,139 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 03:35:30,447 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 03:35:30,461 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 03:35:30,461 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 03:40:30,769 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 03:40:30,791 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 03:40:30,791 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 03:45:31,095 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 03:45:31,110 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 03:45:31,110 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 03:50:31,417 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 03:50:31,431 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 03:50:31,431 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 03:55:31,734 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 03:55:31,748 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 03:55:31,748 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 04:00:32,051 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 04:00:32,071 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 04:00:32,071 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 04:05:32,378 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 04:05:32,391 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 04:05:32,391 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 04:10:32,698 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 04:10:32,716 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 04:10:32,716 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 04:15:33,018 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 04:15:33,032 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 04:15:33,032 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 04:20:33,344 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 04:20:33,359 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 04:20:33,359 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 04:25:33,666 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 04:25:33,679 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 04:25:33,679 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 04:30:33,987 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 04:30:34,001 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 04:30:34,001 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 04:35:34,304 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 04:35:34,317 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 04:35:34,318 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 05:21:40,787 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 05:21:40,810 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 05:21:40,811 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 05:24:08,844 - etl_scheduler - INFO - Starting ETL scheduler
+2025-04-12 05:24:08,844 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 05:24:08,913 - etl_scheduler - INFO - ETL process completed successfully
+2025-04-12 05:24:08,913 - etl_scheduler - INFO - ETL scheduler is running, press CTRL+C to exit
+2025-04-12 05:25:27,410 - etl_scheduler - INFO - ETL scheduler stopped by user
+2025-04-12 05:25:41,068 - etl_scheduler - INFO - Starting ETL scheduler
+2025-04-12 05:25:41,069 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 05:25:44,350 - etl_scheduler - INFO - ETL process completed successfully
+2025-04-12 05:25:44,351 - etl_scheduler - INFO - ETL scheduler is running, press CTRL+C to exit
+2025-04-12 05:26:39,110 - etl_scheduler - INFO - ETL scheduler stopped by user
+2025-04-12 05:26:41,131 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 05:26:41,158 - etl_scheduler - ERROR - ETL process failed with return code 2
+2025-04-12 05:26:41,158 - etl_scheduler - ERROR - Error: python3: can't open file '/home/dharshan/web-projects/data_engg/pipelines/alumni_etl.py': [Errno 2] No such file or directory
+
+2025-04-12 05:26:43,283 - etl_scheduler - INFO - Starting ETL scheduler
+2025-04-12 05:26:43,283 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 05:26:46,986 - etl_scheduler - INFO - ETL process completed successfully
+2025-04-12 05:26:46,986 - etl_scheduler - INFO - ETL scheduler is running, press CTRL+C to exit
+2025-04-12 05:27:12,812 - etl_scheduler - INFO - ETL scheduler stopped by user
+2025-04-12 05:27:15,366 - etl_scheduler - INFO - Starting ETL scheduler
+2025-04-12 05:27:15,366 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 05:27:18,933 - etl_scheduler - INFO - ETL process completed successfully
+2025-04-12 05:27:18,933 - etl_scheduler - INFO - ETL scheduler is running, press CTRL+C to exit
+2025-04-12 05:28:07,133 - etl_scheduler - INFO - ETL scheduler stopped by user
+2025-04-12 05:28:10,044 - etl_scheduler - INFO - Starting ETL scheduler
+2025-04-12 05:28:10,044 - etl_scheduler - INFO - Starting ETL process
+2025-04-12 05:28:13,619 - etl_scheduler - INFO - ETL process completed successfully
+2025-04-12 05:28:13,619 - etl_scheduler - INFO - ETL scheduler is running, press CTRL+C to exit
+2025-04-12 05:28:30,633 - etl_scheduler - INFO - ETL scheduler stopped by user
