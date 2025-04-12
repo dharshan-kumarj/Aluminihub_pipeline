@@ -613,3 +613,44 @@ body {
         margin-top: 10px;
     }
 }
+
+/* ===== Notification Styles ===== */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    border-left: 4px solid var(--success-color);
+    box-shadow: var(--shadow-md);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+}
+
+.notification.error {
+    border-left-color: var(--error-color);
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification i {
+    margin-right: 10px;
+    font-size: 16px;
+    color: var(--success-color);
+}
+
+.notification.error i {
+    color: var(--error-color);
+}
+
+.notification span {
+    flex-grow: 1;
+    font-size: 14px;
+}
