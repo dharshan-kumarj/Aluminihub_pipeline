@@ -25,3 +25,16 @@ LINE 8:             a.phone_number,
 2025-04-12 05:28:13,600 - alumni_etl - INFO - Fetched 4 alumni registrations from the last 10 hours
 2025-04-12 05:28:13,603 - alumni_etl - INFO - Successfully saved 4 registrations to alumni_data/alumni_registrations_20250412_052813.csv
 2025-04-12 05:28:13,604 - alumni_etl - INFO - ETL process completed successfully. Data saved to alumni_data/alumni_registrations_20250412_052813.csv
+2025-04-12 07:20:59,106 - alumni_etl - INFO - Starting ETL process
+2025-04-12 07:21:07,068 - alumni_etl - INFO - Alumni columns: ['alumni_id', 'user_id', 'date_of_birth', 'graduation_year', 'social_media_links', 'availability_for_mentorship', 'created_at', 'updated_at', 'profile_image', 'full_name', 'current_location', 'gender', 'bio', 'contact_number', 'address']
+2025-04-12 07:21:07,068 - alumni_etl - INFO - User columns: ['is_alumni', 'created_at', 'updated_at', 'user_id', 'email', 'username', 'password']
+2025-04-12 07:21:07,555 - alumni_etl - INFO - Fetched 0 alumni registrations from the last 10 hours
+2025-04-12 07:21:07,555 - alumni_etl - INFO - ETL process completed: No new registrations found
+2025-04-12 07:22:08,374 - alumni_etl - INFO - Starting ETL process
+2025-04-12 07:22:12,801 - alumni_etl - INFO - Alumni columns: ['alumni_id', 'user_id', 'date_of_birth', 'graduation_year', 'social_media_links', 'availability_for_mentorship', 'created_at', 'updated_at', 'profile_image', 'full_name', 'current_location', 'gender', 'bio', 'contact_number', 'address']
+2025-04-12 07:22:12,802 - alumni_etl - INFO - User columns: ['is_alumni', 'created_at', 'updated_at', 'user_id', 'email', 'username', 'password']
+2025-04-12 07:22:13,433 - alumni_etl - INFO - Fetched 4 alumni registrations from the last 24 hours
+2025-04-12 07:22:13,435 - alumni_etl - INFO - Successfully saved 4 registrations to alumni_data/alumni_registrations_20250412_072213.csv
+2025-04-12 07:22:13,435 - alumni_etl - INFO - ETL process completed successfully. Data saved to alumni_data/alumni_registrations_20250412_072213.csv
+2025-04-12 07:22:19,034 - alumni_etl - INFO - Email sent to dharshankumarlearn@gmail.com with CSV attachment
+2025-04-12 07:22:19,035 - alumni_etl - INFO - CSV file sent successfully via email

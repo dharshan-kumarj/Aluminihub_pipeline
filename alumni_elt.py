@@ -4,6 +4,10 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 from datetime import datetime, timedelta
 import logging
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.application import MIMEApplication
 
 # Set up logging
 logging.basicConfig(
@@ -15,6 +19,17 @@ logger = logging.getLogger('alumni_etl')
 
 # Database connection parameters
 DB_URL = "postgresql://dharshan:M1dhEFDqWRFPRo0YGddRrrl0eK8g12d1@dpg-cvso7ma4d50c73e83sf0-a.oregon-postgres.render.com/aluminidatahub"
+
+# Email configuration
+EMAIL_CONFIG = {
+    'smtp_server': 'smtp.gmail.com',
+    'smtp_port': 587,
+    'smtp_username': 'jdharshankumar18@gmail.com',  # Replace with your email
+    'smtp_password': 'foyn ufkf fnoo bbtx ',     # Replace with your app password
+    'sender_email': 'jdharshankumar18@gmail.com',   # Replace with your email
+    'recipient_email': 'dharshankumarlearn@gmail.com', # Replace with recipient's email
+    'email_subject': 'Alumni Registration Report'
+}
 
 def get_db_connection():
     try:
@@ -53,7 +68,7 @@ def fetch_recent_registrations(hours=5):
         logger.info(f"Alumni columns: {alumni_columns}")
         logger.info(f"User columns: {user_columns}")
         
-        # Calculate timestamp for 5 hours ago
+        # Calculate timestamp for specified hours ago
         time_threshold = datetime.now() - timedelta(hours=hours)
         
         # Build a dynamic query based on existing columns
@@ -121,18 +136,67 @@ def save_to_csv(registrations):
         logger.error(f"Error saving to CSV: {e}")
         return None
 
+def send_email(csv_file_path, num_registrations):
+    """Send the CSV file as an email attachment"""
+    try:
+        # Create a multipart message
+        msg = MIMEMultipart()
+        msg['From'] = EMAIL_CONFIG['sender_email']
+        msg['To'] = EMAIL_CONFIG['recipient_email']
+        msg['Subject'] = f"{EMAIL_CONFIG['email_subject']} - {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+        
+        # Email body text
+        body = f"""
+        Hello,
+        
+        Attached is the latest alumni registration report with {num_registrations} registrations from the last 10 hours.
+        
+        This is an automated email.
+        
+        Regards,
+        Alumni ETL System
+        """
+        msg.attach(MIMEText(body, 'plain'))
+        
+        # Attach the CSV file
+        with open(csv_file_path, 'rb') as file:
+            attachment = MIMEApplication(file.read(), Name=os.path.basename(csv_file_path))
+            attachment['Content-Disposition'] = f'attachment; filename="{os.path.basename(csv_file_path)}"'
+            msg.attach(attachment)
+        
+        # Connect to the SMTP server
+        server = smtplib.SMTP(EMAIL_CONFIG['smtp_server'], EMAIL_CONFIG['smtp_port'])
+        server.starttls()  # Secure the connection
+        server.login(EMAIL_CONFIG['smtp_username'], EMAIL_CONFIG['smtp_password'])
+        
+        # Send the email
+        server.send_message(msg)
+        server.quit()
+        
+        logger.info(f"Email sent to {EMAIL_CONFIG['recipient_email']} with CSV attachment")
+        return True
+    except Exception as e:
+        logger.error(f"Error sending email: {e}")
+        return False
+
 def run_etl():
-    """Main ETL function to fetch data and save to CSV"""
+    """Main ETL function to fetch data, save to CSV, and send email"""
     logger.info("Starting ETL process")
     
-    # Fetch registrations from the last 5 hours
-    registrations = fetch_recent_registrations(hours=10)
+    # Fetch registrations from the last 10 hours
+    registrations = fetch_recent_registrations(hours=24)
     
     # Save to CSV
     if registrations:
         saved_file = save_to_csv(registrations)
         if saved_file:
             logger.info(f"ETL process completed successfully. Data saved to {saved_file}")
+            
+            # Send email with the CSV attachment
+            if send_email(saved_file, len(registrations)):
+                logger.info("CSV file sent successfully via email")
+            else:
+                logger.error("Failed to send CSV file via email")
         else:
             logger.error("ETL process failed: Could not save data to CSV")
     else:
