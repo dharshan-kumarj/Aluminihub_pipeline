@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni ETL Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-graduation-cap"></i> Alumni ETL</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Statistics</a></li>
+                    <li><a href="#"><i class="fas fa-file-csv"></i> CSV Files</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Email Logs</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <img src="https://ui-avatars.com/api/?name=Dharshan+Kumar&background=0D8ABC&color=fff" alt="User Avatar">
+                    <div>
+                        <p class="user-name">Dharshan Kumar</p>
+                        <p class="user-status">Online</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search logs, files...">
+                </div>
+                <div class="header-actions">
+                    <span class="date-time">2025-04-12 02:53:43 UTC</span>
+                    <button class="refresh-btn"><i class="fas fa-sync-alt"></i> Refresh</button>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-title">
+                <h1>Alumni ETL Dashboard</h1>
+                <p>Monitor your ETL processes and email deliveries</p>
+            </div>
+
+            <!-- Key Metrics -->
+            <section class="metrics-container">
+                <div class="metric-card">
+                    <div class="metric-icon" style="background-color: #4CAF50;">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="metric-details">
+                        <h3>Data Extractions</h3>
+                        <p class="metric-value">142</p>
+                        <p class="metric-change positive">+12% from last week</p>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon" style="background-color: #2196F3;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="metric-details">
+                        <h3>Emails Sent</h3>
+                        <p class="metric-value">138</p>
+                        <p class="metric-change positive">+8% from last week</p>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon" style="background-color: #FF9800;">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="metric-details">
+                        <h3>Alumni Processed</h3>
+                        <p class="metric-value">2,547</p>
+                        <p class="metric-change positive">+23% from last week</p>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon" style="background-color: #E91E63;">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="metric-details">
+                        <h3>Errors</h3>
+                        <p class="metric-value">7</p>
+                        <p class="metric-change negative">+2 from last week</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-container">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>ETL Activity (Last 7 Days)</h3>
+                        <div class="chart-actions">
+                            <button class="chart-btn active">Weekly</button>
+                            <button class="chart-btn">Monthly</button>
+                        </div>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="etlActivityChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Email Delivery Status</h3>
+                        <div class="chart-actions">
+                            <button class="chart-btn active">All</button>
+                            <button class="chart-btn">Failed</button>
+                        </div>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="emailStatusChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Logs -->
+            <section class="recent-logs">
+                <div class="section-header">
+                    <h2>Recent ETL Logs</h2>
+                    <button class="view-all-btn">View All Logs</button>
+                </div>
+                <div class="logs-table-container">
+                    <table class="logs-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Level</th>
+                                <th>Message</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2025-04-12 02:45:23</td>
+                                <td><span class="log-level info">INFO</span></td>
+                                <td>Starting ETL process</td>
+                                <td><span class="status-badge success">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>2025-04-12 02:45:26</td>
+                                <td><span class="log-level info">INFO</span></td>
+                                <td>Fetched 12 alumni registrations from the last 10 hours</td>
+                                <td><span class="status-badge success">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>2025-04-12 02:45:27</td>
+                                <td><span class="log-level info">INFO</span></td>
+                                <td>Successfully saved 12 registrations to alumni_data/alumni_registrations_20250412_024527.csv</td>
+                                <td><span class="status-badge success">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>2025-04-12 02:45:29</td>
+                                <td><span class="log-level info">INFO</span></td>
+                                <td>Email sent to admin@college.edu with CSV attachment</td>
+                                <td><span class="status-badge success">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>2025-04-12 02:40:01</td>
+                                <td><span class="log-level error">ERROR</span></td>
+                                <td>Error sending email: Connection timed out</td>
+                                <td><span class="status-badge error">Failed</span></td>
+                            </tr>
+                            <tr>
+                                <td>2025-04-12 02:35:22</td>
+                                <td><span class="log-level info">INFO</span></td>
+                                <td>ETL process completed: No new registrations found</td>
+                                <td><span class="status-badge warning">No Data</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Recent Files -->
+            <section class="recent-files">
+                <div class="section-header">
+                    <h2>Generated CSV Files</h2>
+                    <button class="view-all-btn">View All Files</button>
+                </div>
+                <div class="files-container">
+                    <div class="file-card">
+                        <div class="file-icon">
+                            <i class="fas fa-file-csv"></i>
+                        </div>
+                        <div class="file-details">
+                            <h4>alumni_registrations_20250412_024527.csv</h4>
+                            <p>Created: 2025-04-12 02:45:27</p>
+                            <p>Size: 4.2 KB</p>
+                            <p>Records: 12</p>
+                        </div>
+                        <div class="file-actions">
+                            <button class="file-btn download"><i class="fas fa-download"></i></button>
+                            <button class="file-btn view"><i class="fas fa-eye"></i></button>
+                            <button class="file-btn email"><i class="fas fa-envelope"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="file-card">
+                        <div class="file-icon">
+                            <i class="fas fa-file-csv"></i>
+                        </div>
+                        <div class="file-details">
+                            <h4>alumni_registrations_20250412_020025.csv</h4>
+                            <p>Created: 2025-04-12 02:00:25</p>
+                            <p>Size: 3.7 KB</p>
+                            <p>Records: 9</p>
+                        </div>
+                        <div class="file-actions">
+                            <button class="file-btn download"><i class="fas fa-download"></i></button>
+                            <button class="file-btn view"><i class="fas fa-eye"></i></button>
+                            <button class="file-btn email"><i class="fas fa-envelope"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="file-card">
+                        <div class="file-icon">
+                            <i class="fas fa-file-csv"></i>
+                        </div>
+                        <div class="file-details">
+                            <h4>alumni_registrations_20250412_013021.csv</h4>
+                            <p>Created: 2025-04-12 01:30:21</p>
+                            <p>Size: 5.1 KB</p>
+                            <p>Records: 15</p>
+                        </div>
+                        <div class="file-actions">
+                            <button class="file-btn download"><i class="fas fa-download"></i></button>
+                            <button class="file-btn view"><i class="fas fa-eye"></i></button>
+                            <button class="file-btn email"><i class="fas fa-envelope"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // ETL Activity Chart
+        const etlActivityCtx = document.getElementById('etlActivityChart').getContext('2d');
+        const etlActivityChart = new Chart(etlActivityCtx, {
+            type: 'line',
+            data: {
+                labels: ['6 Apr', '7 Apr', '8 Apr', '9 Apr', '10 Apr', '11 Apr', '12 Apr'],
+                datasets: [{
+                    label: 'ETL Runs',
+                    data: [18, 22, 24, 20, 26, 23, 25],
+                    borderColor: '#4CAF50',
+                    backgroundColor: 'rgba(76, 175, 80, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }, {
+                    label: 'Emails Sent',
+                    data: [16, 20, 22, 18, 24, 21, 23],
+                    borderColor: '#2196F3',
+                    backgroundColor: 'rgba(33, 150, 243, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(200, 200, 200, 0.1)'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+
+        // Email Status Chart
+        const emailStatusCtx = document.getElementById('emailStatusChart').getContext('2d');
+        const emailStatusChart = new Chart(emailStatusCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Delivered', 'Failed', 'Pending'],
+                datasets: [{
+                    data: [132, 7, 4],
+                    backgroundColor: [
+                        '#4CAF50',
+                        '#F44336',
+                        '#FFC107',
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                    }
+                },
+                cutout: '70%'
+            }
+        });
+
+        // For demo purposes only - refresh button
+        document.querySelector('.refresh-btn').addEventListener('click', function() {
+            alert('Dashboard data would refresh here');
+        });
+    </script>
+</body>
+</html>
